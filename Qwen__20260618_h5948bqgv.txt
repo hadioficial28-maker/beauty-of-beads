@@ -1,0 +1,16 @@
+beauty-of-beads/
+├── app/                 # Next.js pages (App Router)
+│   ├── layout.tsx       # Root layout
+│   ├── page.tsx         # Homepage
+│   ├── shop/            # Shop page
+│   ├── product/[id]/    # Product details
+│   ├── about/           # About page
+│   ├── contact/         # Contact page
+│   ├── faq/             # FAQ page
+│   ├── cart/            # Shopping cart
+│   ├── checkout/        # Checkout page
+│   └── wishlist/        # Wishlist page
+├── components/          # Reusable UI components
+├── context/             # React Context (Cart, Wishlist, Theme)
+├── lib/                 # Utilities & data
+└── public/              # Static assets

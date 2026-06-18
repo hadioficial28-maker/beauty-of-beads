@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 99%;
+    --foreground: 330 15% 15%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-gray-800 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-rose-gold-500 text-white font-medium rounded-full
+           hover:bg-rose-gold-600 transition-all duration-300 hover:shadow-lg hover:shadow-rose-gold-500/30
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-rose-gold-500 text-rose-gold-600
+           dark:text-rose-gold-300 font-medium rounded-full hover:bg-rose-gold-500 hover:text-white
+           transition-all duration-300 active:scale-95;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-gold-400 to-gold-500 text-white
+           font-medium rounded-full hover:shadow-lg hover:shadow-gold-400/40 transition-all duration-300 active:scale-95;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif text-center mb-4 text-gray-900 dark:text-white;
+  }
+
+  .section-subtitle {
+    @apply text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto;
+  }
+
+  .glass {
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-md border border-white/20 dark:border-gray-800;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-rose-gold-500/10;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cream-100 dark:bg-gray-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-rose-gold-300 dark:bg-rose-gold-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-rose-gold-500;
+}
+
+.zoom-container {
+  overflow: hidden;
+}
+.zoom-container img {
+  transition: transform 0.6s ease;
+}
+.zoom-container:hover img {
+  transform: scale(1.1);
+}

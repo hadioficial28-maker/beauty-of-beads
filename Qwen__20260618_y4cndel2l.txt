@@ -1,0 +1,36 @@
+
+---
+
+## 🚀 GitHub Upload Instructions
+
+### Step 1: Create a new GitHub repository
+1. Go to [github.com/new](https://github.com/new)
+2. Name: `beauty-of-beads`
+3. Make it **Public** or **Private**
+4. **DO NOT** initialize with README (we already have one)
+
+### Step 2: Initialize locally and push
+
+```bash
+# Create project folder
+mkdir beauty-of-beads
+cd beauty-of-beads
+
+# Initialize git
+git init
+
+# Copy ALL the files above into their respective paths
+# (Create the folder structure and paste each file)
+
+# Add all files
+git add .
+
+# Commit
+git commit -m "Initial commit: Beauty of Beads e-commerce website"
+
+# Add remote (replace with YOUR GitHub URL)
+git remote add origin https://github.com/YOUR_USERNAME/beauty-of-beads.git
+
+# Push
+git branch -M main
+git push -u origin main
